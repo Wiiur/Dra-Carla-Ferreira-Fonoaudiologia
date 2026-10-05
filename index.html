@@ -138,8 +138,9 @@
   <!-- ==============================================================
        HEADER / NAVEGAÇÃO
   ============================================================== -->
-  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 bg-transparent">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+  <!-- 1. O CABEÇALHO -->
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative z-50">
       
       <a href="#inicio" class="group flex flex-col focus:outline-none animate-fade-in" aria-label="Ir para o início">
         <span class="font-serif text-2xl tracking-wide text-brownDark font-medium transition-colors group-hover:text-brownMain">
@@ -165,28 +166,29 @@
         </a>
       </div>
 
-      <button id="mobile-menu-btn" type="button" class="md:hidden text-brownDark focus:outline-none p-2 animate-fade-in" aria-label="Abrir menu mobile">
+      <button id="mobile-menu-btn" type="button" class="md:hidden text-brownDark focus:outline-none p-2 animate-fade-in relative z-50" aria-label="Abrir menu mobile">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
+</header>
+<!-- O HEADER FECHA AQUI! -->
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden fixed inset-0 top-[76px] bg-bgCream/98 backdrop-blur-md px-8 py-10 flex flex-col justify-between z-40 border-t border-accentGold/20 transform transition-transform duration-300 origin-top">
-      <nav class="flex flex-col space-y-6 text-sm uppercase tracking-widest font-medium text-brownDark">
-        <a href="#inicio" class="mobile-nav-link hover:text-accentGold transition-colors">Início</a>
-        <a href="#sobre" class="mobile-nav-link hover:text-accentGold transition-colors">Sobre</a>
-        <a href="#especialidades" class="mobile-nav-link hover:text-accentGold transition-colors">Especialidades</a>
-        <a href="#como-funciona" class="mobile-nav-link hover:text-accentGold transition-colors">Como Funciona</a>
-        <!-- <a href="#depoimentos" class="mobile-nav-link hover:text-accentGold transition-colors">Depoimentos</a> -->
-        <a href="#duvidas" class="mobile-nav-link hover:text-accentGold transition-colors">Dúvidas Frequentes</a>
-      </nav>
-      <div class="pt-6">
-        <a href="https://wa.me/5519989471340?text=Ol%C3%A1%2C%20Dra.%20Carla%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20funciona%20para%20agendar%20uma%20avalia%C3%A7%C3%A3o%20vocal." target="_blank" class="mobile-nav-link block text-center w-full py-4 rounded-full text-xs uppercase tracking-widest font-medium bg-brownMain text-bgCream active:scale-95 transition-transform">
-          Agendar avaliação
-        </a>
-      </div>
-    </div>
-  </header>
+<!-- 2. O MENU MOBILE FORA DO HEADER -->
+<div id="mobile-menu" class="hidden fixed inset-0 pt-[90px] bg-bgCream/98 backdrop-blur-md px-8 pb-10 flex flex-col justify-between z-40 transform transition-transform duration-300 origin-top h-[100dvh]">
+  <nav class="flex flex-col space-y-6 text-sm uppercase tracking-widest font-medium text-brownDark">
+    <a href="#inicio" class="mobile-nav-link hover:text-accentGold transition-colors">Início</a>
+    <a href="#sobre" class="mobile-nav-link hover:text-accentGold transition-colors">Sobre</a>
+    <a href="#especialidades" class="mobile-nav-link hover:text-accentGold transition-colors">Especialidades</a>
+    <a href="#depoimentos" class="mobile-nav-link hover:text-accentGold transition-colors">Depoimentos</a>
+    <a href="#como-funciona" class="mobile-nav-link hover:text-accentGold transition-colors">Como Funciona</a>
+    <a href="#duvidas" class="mobile-nav-link hover:text-accentGold transition-colors">Dúvidas Frequentes</a>
+  </nav>
+  <div class="pt-6">
+    <a href="https://wa.me/5519989471340?text=Ol%C3%A1%2C%20Dra.%20Carla%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20funciona%20para%20agendar%20uma%20avalia%C3%A7%C3%A3o%20vocal." target="_blank" class="mobile-nav-link block text-center w-full py-4 rounded-full text-xs uppercase tracking-widest font-medium bg-brownMain text-bgCream active:scale-95 transition-transform">
+      Agendar avaliação
+    </a>
+  </div>
+</div>
 
   <main>
     <!-- ==============================================================
@@ -226,15 +228,26 @@
               </a>
             </div>
 
-            <div class="opacity-0 animate-fade-in-up mt-12 pt-6 border-t border-brownDark/10 flex items-center space-x-6 text-xs text-brownMedium font-light" style="animation-delay: 600ms;">
+            <div class="opacity-0 animate-fade-in-up mt-12 pt-6 border-t border-brownDark/10 flex flex-wrap gap-x-6 gap-y-4 items-center text-xs text-brownMedium font-light" style="animation-delay: 600ms;">
               <div class="flex items-center space-x-2 hover:text-brownMain transition-colors">
                 <i data-lucide="shield-check" class="w-4 h-4 text-accentGold"></i>
                 <span>Prática baseada em evidências</span>
               </div>
+              
               <div class="flex items-center space-x-2 hover:text-brownMain transition-colors">
                 <i data-lucide="sparkles" class="w-4 h-4 text-accentGold"></i>
                 <span>Presença e alta performance</span>
               </div>
+
+              <!-- Nova Tag do Instagram Clicável -->
+              <a href="https://instagram.com/carlah.fg" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-brownMain transition-colors group cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accentGold flex-shrink-0 group-hover:text-brownMain transition-colors">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+                <span class=" decoration-accentGold/40 group-hover:decoration-accentGold transition-colors">Acompanhe no Instagram</span>
+              </a>
             </div>
           </div>
 
@@ -398,6 +411,30 @@
             </div>
             <h3 class="font-serif text-2xl text-brownDark mb-3 font-normal">Voz Profissional</h3>
             <p class="text-sm text-brownDark/75 font-light leading-relaxed">Preparação e condicionamento para cantores, professores, advogados, executivos e comunicadores.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-brownDark/10 bg-bgCream/60 hover:bg-bgCream hover:shadow-xl hover:-translate-y-1.5 hover:border-accentGold/40 transition-all duration-500 reveal delay-100 group">
+            <div class="w-12 h-12 rounded-full bg-bgSecondary flex items-center justify-center mb-6 text-brownMain group-hover:bg-brownMain group-hover:text-bgCream transition-colors duration-500">
+              <i data-lucide="activity" class="w-5 h-5 group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="font-serif text-2xl text-brownDark mb-3 font-normal">Mentoria e Supervisão</h3>
+            <p class="text-sm text-brownDark/75 font-light leading-relaxed">Apoio estratégico e direcionamento técnico na condução de pacientes, promovendo segurança, raciocínio clínico e excelência no atendimento fonoaudiológico.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-brownDark/10 bg-bgCream/60 hover:bg-bgCream hover:shadow-xl hover:-translate-y-1.5 hover:border-accentGold/40 transition-all duration-500 reveal delay-100 group">
+            <div class="w-12 h-12 rounded-full bg-bgSecondary flex items-center justify-center mb-6 text-brownMain group-hover:bg-brownMain group-hover:text-bgCream transition-colors duration-500">
+              <i data-lucide="activity" class="w-5 h-5 group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="font-serif text-2xl text-brownDark mb-3 font-normal">Coaching de Performance Vocal</h3>
+            <p class="text-sm text-brownDark/75 font-light leading-relaxed">Suporte imediato pré-apresentação com exercícios de aquecimento e ajustes vocais precisos para otimizar a voz em shows, gravações, aulas e palestras.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-brownDark/10 bg-bgCream/60 hover:bg-bgCream hover:shadow-xl hover:-translate-y-1.5 hover:border-accentGold/40 transition-all duration-500 reveal delay-100 group">
+            <div class="w-12 h-12 rounded-full bg-bgSecondary flex items-center justify-center mb-6 text-brownMain group-hover:bg-brownMain group-hover:text-bgCream transition-colors duration-500">
+              <i data-lucide="activity" class="w-5 h-5 group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <h3 class="font-serif text-2xl text-brownDark mb-3 font-normal">Dicção e Articulação</h3>
+            <p class="text-sm text-brownDark/75 font-light leading-relaxed">Treinamento focado na clareza da fala, aprimorando a pronúncia exata das palavras para garantir uma comunicação mais precisa, fluida e compreensível.</p>
           </div>
         </div>
       </div>
@@ -598,7 +635,17 @@
                 <i data-lucide="graduation-cap" class="w-5 h-5 text-accentGold flex-shrink-0 mt-0.5 group-hover:-translate-y-1 transition-transform"></i>
                 <div class="text-sm">
                   <span class="font-semibold text-brownDark uppercase tracking-wider text-xs block">Formação Acadêmica</span>
-                  <span class="text-brownDark/75 font-light">[Graduação em Fonoaudiologia]</span>
+                  <span class="text-brownDark/75 font-light">Fonoaudiologia UNICAMP</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-4 my-8 p-6 rounded-2xl bg-bgCream/80 hover:bg-bgCream border border-accentGold/25 transition-colors duration-500">
+              <!-- Placeholder de Formação -->
+              <div class="flex items-start space-x-3 group">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-accentGold flex-shrink-0 mt-0.5 group-hover:-translate-y-1 transition-transform"></i>
+                <div class="text-sm">
+                  <span class="font-semibold text-brownDark uppercase tracking-wider text-xs block">Pós Graduação</span>
+                  <span class="text-brownDark/75 font-light">Especialização em voz - CEV</span>
                 </div>
               </div>
             </div>
@@ -677,7 +724,7 @@
             </button>
             <div class="faq-content px-6">
               <p class="text-sm text-brownDark/80 font-light pb-6 leading-relaxed">
-                Sim. Diversos casos de aprimoramento vocal, condicionamento e terapia contam com excelente adesão e resultados rápidos através da modalidade online. O formato remoto mantém o rigor técnico da consulta presencial, oferecendo a praticidade que a sua rotina exige, onde quer que você esteja.
+                Sim. Diversos casos de aprimoramento vocal, condicionamento e terapia contam com excelente adesão e resultados rápidos através da modalidade online, oferecendo a praticidade que a sua rotina exige. No entanto, para garantir a qualidade do processo, realizamos sempre uma avaliação prévia. Este passo é fundamental para verificar se o formato remoto se adequa plenamente às suas necessidades, assegurando que a evolução não seja prejudicada e mantendo o mesmo rigor técnico da consulta presencial.
               </p>
             </div>
           </div>
